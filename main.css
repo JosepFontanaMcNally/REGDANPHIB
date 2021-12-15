@@ -1,0 +1,280 @@
+body {
+    margin: 0px;
+    font-family: 'Avenir';
+    /* background-color: #b7c9e2; */
+    /* background-image: url('https://www.riverpointfamilydental.com/wp-content/uploads/2016/05/Background-fade.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+}
+
+header {
+    margin: 0px;
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
+
+footer {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* || Flex and Layout */
+
+section {
+    display: flex;
+    justify-content: center;
+    /* gap: 0px; */
+    background-image: url('https://www.riverpointfamilydental.com/wp-content/uploads/2016/05/Background-fade.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.item {
+    /* background-color: #b7c9e2; */
+    /* margin-top: 10px; */
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.item.side {
+    width: 30%;
+}
+
+.item.side div {
+    margin-right: 0px;
+}
+
+.item.main {
+    width: 60%
+}
+
+div {
+    padding: 10px;
+    /* background-color: green; */
+    /* border-radius: 10px; */
+    margin: 15px;
+}
+
+/* || || Formating pannels */
+
+.pannel {
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* || Download Pannel */
+
+.download {
+    padding: 3px 10px 10px 10px;
+}
+
+#Download:hover, #uploadButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) inset;
+}
+
+#Download {
+    background-image: url('https://media.istockphoto.com/vectors/download-and-upload-icon-symbol-vector-vector-id1208760107');
+    background-size: 200%;
+    background-position: 90% 50%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    top: 7px;
+    left: 0px;
+    cursor: pointer;
+}
+
+#UploadLabel {
+    float: right;
+    position: relative;
+    top: -2px;
+}
+
+#uploadCsv {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#uploadButton {
+    background-image: url('https://media.istockphoto.com/vectors/download-and-upload-icon-symbol-vector-vector-id1208760107');
+    background-size: 180%;
+    background-position: 3% 50%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    object-fit: cover;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    top: 7px;
+    left: 0px;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+
+/* || Results Pannel */
+
+.results {
+    overflow: auto;
+    height: 515px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    text-align: center;
+}
+
+th {
+    border-bottom: 2px solid #bbb;
+    width: 80px;
+}
+
+td {
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+}
+
+.TablePerturbations {
+    width: 120px;
+}
+
+/* Buttons animation*/
+.buttonsCol {
+    width: 0px;
+    opacity: 0;
+    transition: width 0.5s, opacity 0.7s;
+}
+
+table:hover .buttonsCol {
+    width: 90px;
+    opacity: 1;
+}
+
+.buttonsCell {
+    position: relative;
+}
+
+.buttonsCell button {
+    position: absolute;
+    margin: 0px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+tr:hover .buttonsCell button {
+    opacity: 1;
+}
+
+/* Buttons style */
+.buttonsCell button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) inset;
+}
+
+.deleteButton {
+    background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/10/07/Delete-Icon-Graphics-5907054-1-1-580x387.jpg');
+    background-size: 250%;
+    object-fit: cover;
+    background-position: center;
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    left: 7px;
+    cursor: pointer;
+}
+
+.selectButton {
+    font-family: inherit;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 50px;
+    height: 20px;
+    top: 7px;
+    left: 35px;
+    cursor: pointer;
+}
+
+/* || Toolbar Pannel */
+
+.toolbar form {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+
+    display: table;
+    table-layout: fixed; /*Optional*/
+}
+
+.toolbar form div {
+    margin: 0px;
+    padding: 5px;
+
+    display: table-cell;
+}
+
+.type-related {
+    width: 20%;
+    text-align: center;
+}
+
+.perturbation-labels {
+    width: 25%;
+    text-align: right;
+}
+
+.perturbation-inputs {
+    width: 25%;
+    text-align: left;
+}
+
+.writhe-related {
+    width: 30%;
+    text-align: center;
+}
+
+#currentWritheStr {
+    margin-right: 10px;
+}
+
+/* || GeoGebra Pannel */
+
+.ggb, .ggb div {
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.ggb {
+    position: relative;
+}
+
+.ggb div {
+    margin: 0px;
+    /* position: relative; */
+    /* left: -3px; */
+}
+
+#Clear {
+    position: absolute;
+    top: 19px;
+    right: 45px;
+    z-index: 10;
+    float: right;
+}
+'+
