@@ -2,89 +2,24 @@
 <html>
 
 <head>
-    <title>Phibonizer</title>
+    <title>Regal Dani</title>
     <meta name=viewport content="width=device-width,initial-scale=1">
     <meta charset="utf-8" />
     <link rel="stylesheet" href="main.css">
     <!-- Coses de GeoGebra -->
-    <!-- <script type="text/javascript" src="writheCalculator.js"></script> -->
+    <script type="text/javascript" src="play.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Phibonizer</h1>
-        <p style="width:800px">This page allows you to easily calculate the writhe of two segments. To do so, simply click
-            on the graphing area to place points and drag them around to see how the writhe changes.
-        </p>
-    </header>
-
-    <section>
-        <div class="item side">
-            <div class="download pannel">
-                <form action="index.html" method="post" class="fileForm">
-                    <label for="Download">Download Table as .csv:</label>
-                    <input type="button" id="Download" onclick="downloadTable(tableData)" name="Download" value="">
-                    <label for="uploadCsv" id="UploadLabel">Upload .csv: <div id="uploadButton"></div></label>
-                    <input type="file" name="uploadCsv" value="" id="uploadCsv" onchange="readCSV(this)" accept=".csv">
-                </form>
-            </div>
-            <div class="results pannel">
-                <table id="resultsTable">
-                    <tr>
-                        <th class="buttonsCol">Options</th>
-                        <th class="TableWrithe">Writhe</th>
-                        <th class="TableA">A</th>
-                        <th class="TableB">B</th>
-                        <th class="TableC">C</th>
-                        <th class="TableD">D</th>
-                        <th class="TableCalculationMode">Mode</th>
-                        <th class="TablePerturbations">Perturbations</th>
-                    </tr>
-                </table>
-            </div>
+    <div id="backgroundDiv">
+        <div id="presentContainer" class="containerClosed">
+            <button id="Present" onclick="openPresent()"> </button>
+            <audio id="audio" onended="audioEnd()"> <source src="./hpybd4.wav" type="audio/wav"></audio>
         </div>
-        <div class="item main">
-            <div class="toolbar pannel">
-                <form onchange="updateWrithe(ggbApi)">
-                    <div class="type-related">
-                        <label for="writheType">Calculation Mode:</label><br>
-                        <select id="writheType" name="writheType">
-                            <option value="derivada">Derivada</option>
-                            <option value="volum">Volum</option>
-                        </select>
-                    </div>
-                    <div class="perturbation-labels">
-                        <label for="">Perturbated points: </label><br>
-                        <label for="eps">Amount:</label>
-                    </div>
-                    <div class="perturbation-inputs">
-                        <label for="A">A</label>
-                        <input type="checkbox" name="perturbated" id="A">
-                        <label for="B">B</label>
-                        <input type="checkbox" name="perturbated" id="B" checked=true>
-                        <label for="C">C</label>
-                        <input type="checkbox" name="perturbated" id="C">
-                        <label for="D">D</label>
-                        <input type="checkbox" name="perturbated" id="D" checked=true>
-                        <br>
-                        <textarea id="eps" rows="1" cols="10">0.0001</textarea>
-                    </div>
-                    <div class="writhe-related">
-                        <label for="" id="currentWritheStr">Writhe: --- </label><br>
-                        <input value="Save to table" id="Save to table" disabled onclick="saveWritheToTable()" type="button">
-                    </div>
-                </form>
-            </div>
-            <div class="ggb pannel">
-                <div id="ggb-element"></div>
-                <button id="Clear" onclick="ggbReset(ggbApi)">Clear</button>
-            </div>
+        <div id="textContainer" class="textClosed">
+          <p>Felicitats Dani! Si vols tocar el <i>Phibonizer</i>, pots <a href="">aquí</a></p>
         </div>
-    </section>
-
-    <footer>
-        <p>Contact: josep.fontana@estudiantat.upc.edu</p>
-    </footer>
+    </div>
 </body>
 
 </html>
